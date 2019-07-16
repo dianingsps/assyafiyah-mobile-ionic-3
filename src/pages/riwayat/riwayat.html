@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle> 
+      <ion-icon name="menu" color="light"></ion-icon>
+    </button>  
+    <ion-title><font style="color: white">Riwayat</font></ion-title>   
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-list class="list-avatar-page">
+  <ion-item *ngFor="let va of data" (click)="detail(va)"> 
+    <ion-icon name="{{va.icon}}" [ngStyle]="{'color': colorIcon}" item-start></ion-icon>
+    <h2>{{ va.jenistr }}</h2>
+    <p> {{va.nopelangganperproduk}} : Rp. {{va.total}}</p>
+    <ion-note item-end>{{va.datetime}}</ion-note>
+  </ion-item>
+</ion-list>   
+
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+  <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>  

@@ -1,0 +1,19 @@
+<ion-card>  
+  <ion-list>
+    <ion-item>  
+      <ion-label><font class="teks">Pilih Rekening : </font></ion-label>
+      <ion-select [(ngModel)]="cRekening" interface="popover">     
+        <ion-option *ngFor="let item of data" value="{{item.rekening}}-{{item.nama}}">{{item.rekening}} - {{item.nama}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <hr no-margin>
+  <div padding><button ion-button block color="ijo" (click)="proses()" type="submit">Selanjutnya</button></div>  
+  
+</ion-card>
+
+<ion-footer no-border> 
+  <div align="right">
+    <button ion-fab color="fabColor" (click)="add()" style="font-size:28px" class="fab">+</button> 
+  </div> 
+</ion-footer> 

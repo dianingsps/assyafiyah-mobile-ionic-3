@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Pesan Saya</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="list-avatar-page">
+  <ion-list *ngFor="let type of a">
+
+    <ion-item *ngFor="let client of x[type]">
+      <h1>{{ client.time }}</h1>
+      <h2>{{ type }}</h2>
+      <p>{{ client.msg }}</p>
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

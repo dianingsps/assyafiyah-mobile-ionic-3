@@ -1,0 +1,46 @@
+<ion-header no-shadow no-border> 
+  <ion-navbar>
+     <button ion-button menuToggle> 
+       <ion-icon name="menu"></ion-icon>
+     </button>  
+     <ion-title>Kirim Uang Antar Bank</ion-title>   
+   </ion-navbar>
+ </ion-header>
+ 
+ <ion-content>  
+   <ion-card style="padding:3%"> 
+     <ion-list>
+       <ion-item> 
+         <ion-label style="font-size:13px">Pilih Rekening Asal : </ion-label>
+         <ion-select [(ngModel)]="cRekeningAsal" interface="popover">
+           <ion-option *ngFor="let item of optionsList" value="{{item.value}}">{{item.text}}</ion-option>
+         </ion-select> 
+       </ion-item>  
+       <ion-item> 
+         <ion-label style="font-size:13px">Bank Tujuan : </ion-label>
+         <ion-select [(ngModel)]="cBankTujuan" interface="popover">
+           <ion-option *ngFor="let item of data" value="{{item.kode}}|{{item.nama}}">{{item.kode}} - {{item.nama}}</ion-option>
+         </ion-select> 
+       </ion-item> 
+       <ion-item>
+           <ion-label stacked>Rekening Tujuan :</ion-label>  
+           <ion-input type="number" [(ngModel)]="cRekeningTujuan">{{cRekeningTujuan}}</ion-input>
+       </ion-item>  
+       <ion-item>
+        <ion-label stacked>Rekening Atas Nama :</ion-label>  
+        <ion-input type="text" [(ngModel)]="cNamaTujuan"></ion-input>
+       </ion-item> 
+       <ion-item>
+         <ion-label stacked>Nominal :</ion-label>  
+         <ion-input type="number" [(ngModel)]="cNominal"></ion-input>
+       </ion-item>  
+       <ion-item>
+         <ion-label stacked>Keterangan (Opsional) :</ion-label>  
+         <ion-input type="text" [(ngModel)]="cBerita"></ion-input> 
+       </ion-item> 
+       <ion-label class="admin" stacked color="danger">&nbsp;&nbsp;&nbsp;*) Biaya admin berlaku pada transaksi ini</ion-label>  
+     </ion-list>
+     <div padding><button ion-button block (click)="validSaving()" type="submit">Proses</button></div>      
+     
+   </ion-card>
+ </ion-content>

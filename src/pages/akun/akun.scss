@@ -1,0 +1,54 @@
+page-akun {
+  .back-button-icon-md {
+    color: white;
+  }
+
+  .toolbar-background{
+    background-color: #36884D;
+  }
+
+  ion-content{
+    background-color: transparent;
+    background-image: url('assets/images/wallpaper.png') no-repeat center;
+    background-size: 70% 40%;
+  } 
+  $num-of-tabs: 3;
+  
+   @mixin tabs {
+     @for $i from 1 through $num-of-tabs {
+       &:nth-of-type(#{$i}) {
+         &.segment-activated {
+           ~ .slide {
+             left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+           }
+         }
+       }
+     }
+   }
+  .segment-button {
+     border: 0 !important;
+     @include tabs;
+   }
+  
+   .slide {
+     background: dodgerblue;
+     width: calc(100% / #{$num-of-tabs});
+     height: 4px;
+     position: absolute;
+     left: 0;
+     top: calc(100% - 4px);
+     transition: left 0.3s ease-out;
+   }
+
+   /**
+   .title.title-md {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    }
+    **/
+}

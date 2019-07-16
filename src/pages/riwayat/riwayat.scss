@@ -1,0 +1,23 @@
+page-riwayat {
+  .back-button-icon-md {
+    color: white;
+  }
+
+  .toolbar-background{
+    background-color: #36884D;
+  }
+  
+  .list-avatar-page {
+    ion-note {
+      font-size: 12px;
+      align-self: flex-start;
+      margin-top: 14px;
+    }
+    h2{
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  }
+
+}

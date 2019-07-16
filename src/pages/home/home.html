@@ -1,0 +1,36 @@
+<!--
+<ion-header>
+  <ion-navbar> 
+   <ion-title>Mobile Banking</ion-title>
+  </ion-navbar>  
+</ion-header>
+-->
+
+<ion-content style="background: url('assets/border-left-corn.png') no-repeat; background-position-x: 10%; background-position: bottom; height: 101%;">
+  <ion-grid no-padding class="atas">
+    <ion-row justify-content-center>
+      <img src="assets/logo.png" class="logo"/>
+    </ion-row>
+    <ion-row>
+      <div class="top">
+        <div class="judul">Ceria Digital</div>
+        <div class="teks">Sudah pernah aktif sebelumnya? <font class="link" (click)="sayasudahaktif()">Masuk disini</font></div>
+      </div>
+    </ion-row>
+    <ion-row justify-content-center>
+      <button class="btnToken" (click)="dapatkantoken()">DAFTAR</button>
+    </ion-row>
+    <ion-row justify-content-center>
+      <div class="teks">Sudah dapat sms token? <font class="link" (click)="tokenmasuk()">Masuk disini</font></div>
+    </ion-row>
+  </ion-grid>
+  <ion-grid no-padding class="bawah">
+    <ion-row justify-content-center style="margin-left: -1.5%; margin-bottom: -1.5%">
+      <!-- <img src="assets/border-left-corn.png"/> -->
+    </ion-row>
+  </ion-grid>
+  <!-- <button ion-button block color="primary" (click)="sayasudahaktif()">SAYA SUDAH AKTIF</button>
+  <ion-label text-center><b>ATAU</b></ion-label>   
+  <button ion-button block outline color="dark" (click)="dapatkantoken()">DAPATKAN TOKEN</button>
+  <ion-label text-center (click)="tokenmasuk()" style="font-size:16px;">Sudah Punya Token? <b> Masuk </b></ion-label> -->
+</ion-content>

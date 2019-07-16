@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title><font style="color: white">Setting</font></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-border>
+
+    <ion-list-header no-margin>
+      Perangkat
+    </ion-list-header>
+
+    <ion-item (click)="ambilproduk()">
+      <ion-icon name='cloud-download' item-start></ion-icon>
+      Ambil Data Produk
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+
+    <ion-list-header no-margin>
+      Akun
+    </ion-list-header>
+
+    <ion-item (click)="downloadrekening()">
+      Ambil Rekening
+      <ion-icon name='contacts' item-start></ion-icon>
+    </ion-item> 
+
+    <ion-item (click)="ubahrekeningutama()"> 
+      Ubah Rekening Utama
+      <ion-icon name='card' item-start></ion-icon>
+    </ion-item>
+
+
+    <ion-item (click)="riwayat()">
+      <ion-icon name='list' item-start></ion-icon>
+      Riwayat Transaksi
+    </ion-item>
+
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-list-header no-margin>
+      Keamanan
+    </ion-list-header>
+
+    <ion-item (click)="gantipin()">
+      <ion-icon name='keypad' item-start></ion-icon>
+      Ganti PIN
+    </ion-item>
+
+    <ion-item (click)="gantipass()">
+      <ion-icon name='key' item-start></ion-icon>
+      Atur Password
+    </ion-item>
+
+    
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header no-margin>
+      Lainnya
+    </ion-list-header>
+    <ion-item (click)="getCS()">
+      <ion-icon name='call' item-start></ion-icon>
+      Call Center & Info Bank
+    </ion-item>
+
+    <ion-item (click)="getversion()">
+      <ion-icon name='information-circle' item-start></ion-icon>
+      Tentang Aplikasi
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-icon name='exit' item-start></ion-icon>
+      Keluar
+      <ion-note item-end>keluar dari aplikasi</ion-note>
+    </ion-item> -->
+
+  </ion-list>
+
+
+</ion-content>

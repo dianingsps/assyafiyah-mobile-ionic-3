@@ -1,0 +1,30 @@
+page-akun-mutasi-detail {
+
+    .icon{
+        color: #0a6fd6;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .title.title-md {
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 70%;
+        text-align: center;
+    }
+
+    .isi{
+        margin-top: 4px;
+        font-weight: bold;
+        font-size: 16px; 
+    }
+
+    .isiket{
+        margin-top: 4px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}

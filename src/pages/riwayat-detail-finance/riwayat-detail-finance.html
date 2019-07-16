@@ -1,0 +1,68 @@
+<!--
+  Generated template for the PaymentCicilanBayarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left> 
+      <button ion-button (click)="dismiss()">  
+        <ion-icon name="ios-arrow-back">&nbsp;Back</ion-icon>
+      </button> 
+    </ion-buttons>
+    <ion-title>Finance - {{cTitle}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>  
+  <ion-list>
+    <ion-item>
+        <ion-label stacked>Tanggal :</ion-label>  
+        <ion-input disabled type="text" [(ngModel)]="dTgl">{{dTgl}}</ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label stacked>Nomor Resi :</ion-label>  
+      <ion-input disabled type="number" [(ngModel)]="cNoResi">{{cNoResi}}</ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label stacked>Nama Kredit:</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cNamaKredit">{{cNamaKredit}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>ID Pelanggan :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cIDPel">{{cIDPel}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Nama Pelanggan :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cNamaPelanggan">{{cNamaPelanggan}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>ID Reff :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cIDReff">{{cIDReff}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>No Angsuran :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cNoAngsuran">{{cNoAngsuran}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Tagihan :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="nTagihan">{{nTagihan}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Admin Bank :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="nAdminBank">{{nAdminBank}}</ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Total :</ion-label>  
+        <ion-input disabled type="text" [(ngModel)]="nTotal">{{nTotal}}</ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Status :</ion-label>  
+        <ion-input disabled type="text" [(ngModel)]="cStatus">{{cStatus}}</ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

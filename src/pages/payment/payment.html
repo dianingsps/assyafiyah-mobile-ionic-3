@@ -1,0 +1,17 @@
+  <ion-header no-shadow no-border>
+    <ion-navbar>
+      <button ion-button menuToggle> 
+        <ion-icon name="menu" color="light"></ion-icon>
+      </button>  
+      <ion-title><font style="color: white">Pascabayar</font></ion-title>   
+    </ion-navbar>
+  </ion-header>
+   
+  <ion-content no-bounce>                    
+    <super-tabs id="mainTabs" [config]="{ sideMenu: 'left' }" toolbarColor="light" toolbarBackground="ijo" indicatorColor="yellow" badgeColor="yellow" (tabSelect)="onTabSelect($event)">
+      <super-tab [swipeBackEnabled]="false" [root]="page1" [title]="showTitles? 'Listrik' : ''" [icon]="showIcons? 'flash': ''" id="page1"></super-tab>
+      <super-tab [root]="page2" [title]="showTitles? 'PDAM' : ''" [icon]="showIcons? 'water' : ''" id="page2"></super-tab>
+      <super-tab [root]="page3" [title]="showTitles? 'Telepon' : ''" [icon]="showIcons? 'call' : ''" id="page3"></super-tab>
+      <super-tab [root]="page4" [title]="showTitles? 'Cicilan' : ''" [icon]="showIcons? 'card' : ''" id="page4"></super-tab>
+    </super-tabs>
+  </ion-content>

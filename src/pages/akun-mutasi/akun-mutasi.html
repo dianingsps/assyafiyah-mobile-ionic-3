@@ -1,0 +1,24 @@
+<ion-card>  
+  <ion-list>
+    <ion-item> 
+      <ion-label><font class="teks">Pilih Rekening : </font></ion-label>
+      <ion-select [(ngModel)]="cRekening" interface="popover">
+        <ion-option *ngFor="let item of optionsList" value="{{item.value}}">{{item.text}}</ion-option>
+      </ion-select> 
+    </ion-item>
+    <ion-item>  
+      <ion-label><font class="teks">Tgl Mulai : </font></ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="cTglMulai"></ion-datetime>
+    </ion-item>
+    <ion-item>   
+      <ion-label><font class="teks">Tgl Selesai : </font></ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="cTglSelesai"></ion-datetime>
+    </ion-item>
+  </ion-list>  
+  <hr>
+  <div padding><button ion-button block color="ijo" (click)="proses()" type="submit">Proses</button></div>  
+  <div>
+    <ion-label style="margin-left: 4%;color: red; margin-top: 5%;">* Maksimal transaksi yang bisa diproses: 3 bulan</ion-label>
+  </div>
+</ion-card>
+ 

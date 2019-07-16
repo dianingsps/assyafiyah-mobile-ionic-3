@@ -1,0 +1,21 @@
+<ion-header no-shadow no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="light"></ion-icon>
+    </button>
+    <ion-title><font style="color: white">Informasi Rekening</font></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <super-tabs id="mainTabs" toolbarColor="light" toolbarBackground="ijo"
+  indicatorColor="yellow" badgeColor="yellow" [config]="{ sideMenu: 'left' }" (tabSelect)="onTabSelect($event)">
+    <super-tab [swipeBackEnabled]="false" [root]="page1" [title]="showTitles? 'Cek Saldo' : ''" [icon]="showIcons? 'information-circle': ''"
+      id="page1">
+    </super-tab>
+    <super-tab [root]="page2" [title]="showTitles? 'Mutasi' : ''" [icon]="showIcons? 'list-box' : ''" id="page2">
+    </super-tab>
+    <super-tab [root]="page3" [title]="showTitles? 'Kirim Uang' : ''" [icon]="showIcons? 'share-alt' : ''" id="page3">
+    </super-tab>
+  </super-tabs>
+</ion-content>

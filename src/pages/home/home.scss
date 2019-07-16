@@ -1,0 +1,68 @@
+page-home {
+    
+    .content{
+        height: 100%;
+        width: 100%;
+    }
+
+    .atas{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .bawah{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .row{
+        width: 100%;
+    }
+
+    .btnToken{
+        margin-top: -15%; 
+        border-radius: 50px;
+        //background-color: #36884D;
+        background: linear-gradient(to right, #36884D 0%, #c4a726 100%);
+        padding: 4% 18% 3.5% 18%;
+        color: #FFFFFF;
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+    .teks{
+        margin-top: 3%;
+        font-size: 11pt;
+    }
+
+    .teks2{
+        margin-top: 2%;
+        font-size: 11pt;
+    }
+
+    .link{
+        font-weight: bold;
+    }
+
+    .judul{
+        // text-transform: uppercase;
+        background: linear-gradient(to right, #36884D 0%, #fdd835 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 24pt;
+        font-weight: 500;
+    }
+
+    .top{
+        margin: -5% 0 30% 8%;
+    }
+
+    .logo{
+        width: 30%;
+        height: 30%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+}

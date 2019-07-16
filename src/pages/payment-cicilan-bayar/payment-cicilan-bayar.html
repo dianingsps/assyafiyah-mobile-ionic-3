@@ -1,0 +1,87 @@
+<!--
+  Generated template for the PaymentCicilanBayarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left> 
+      <button ion-button (click)="dismiss()">  
+        <ion-icon name="ios-arrow-back">&nbsp;Back</ion-icon>
+      </button> 
+    </ion-buttons>
+    <ion-title>{{cTitle}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>  
+  <ion-list>
+    <ion-item> 
+      <ion-label>Pilih Rekening : </ion-label>
+      <ion-select [(ngModel)]="cRekening" interface="popover">
+        <ion-option *ngFor="let item of optionsList" value="{{item.value}}">{{item.text}}</ion-option>
+      </ion-select> 
+    </ion-item>  
+    <ion-item>
+        <ion-label stacked>ID Pelanggan :</ion-label>  
+        <ion-input disabled type="number" [(ngModel)]="cNomor">{{cNomor}}</ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label stacked>Nama Pelanggan:</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cNama">{{cNama}}</ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label floating>Nama Kredit :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cPerusahaan">{{cPerusahaan}}</ion-input>
+    </ion-item>  
+    <ion-item [hidden]="lCabang">
+      <ion-label floating>Cabang :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cBranch">{{cBranch}}</ion-input>
+    </ion-item>  
+    <ion-item [hidden]="lPlatNomor">
+      <ion-label floating>Plat Nomor :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cPlat">{{cPlat}}</ion-input>
+    </ion-item>  
+    <ion-item [hidden]="lTipeMotor">
+      <ion-label floating>Tipe Motor :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cTipeMotor">{{cTipeMotor}}</ion-input>
+    </ion-item>  
+    <ion-item [hidden]="lIDReff">
+      <ion-label floating>ID Reff :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cIDReff">{{cIDReff}}</ion-input>
+    </ion-item>  
+    <ion-item [hidden]="lMerk">
+      <ion-label floating>Merk :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cMerk">{{cMerk}}</ion-input>
+    </ion-item>
+    <ion-item [hidden]="lJthTmp">
+      <ion-label floating>Jatuh Tempo:</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cJthTmp">{{cJthTmp}}</ion-input>
+    </ion-item>    
+    <ion-item [hidden]="lTenor">
+      <ion-label floating>Tenor :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cTenor">{{cTenor}}</ion-input>
+    </ion-item>  
+    <ion-item [hidden]="lKe">
+      <ion-label floating>Pembayaran Ke :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cKe">{{cKe}}</ion-input>
+    </ion-item>
+    <ion-item [hidden]="lNominal">
+      <ion-label>Tagihan :</ion-label>  
+      <ion-input disabled style="font-size:18px; color: black;" type="number" [(ngModel)]="cNominal" text-end>{{cNominal}}</ion-input>
+    </ion-item>  
+    <ion-item style="align-content: center;" [hidden]="lAdmin">
+      <ion-label>Admin :</ion-label>  
+      <ion-input disabled style="font-size:18px; color: black;" type="number" [(ngModel)]="cAdmin" text-end>{{cAdmin}}</ion-input>
+    </ion-item>   
+    <ion-item>
+      <ion-label>Total Bayar :</ion-label>  
+      <ion-input disabled style="font-size:18px; color: black;" type="number" [(ngModel)]="cTotalBayar" text-end>{{cTotalBayar}}</ion-input>
+    </ion-item>    
+
+  </ion-list>
+  <div padding><button ion-button block (click)="validSaving()" type="submit">Proses</button></div>      
+</ion-content>

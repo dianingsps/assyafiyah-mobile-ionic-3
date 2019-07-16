@@ -1,0 +1,45 @@
+<!-- <ion-content padding> 
+  <ion-label>
+      <h3 align="left">Selamat Datang,</h3>
+      <h3 align="left">{{cNamaNasabah}}</h3>
+      <h5 align="left">Masukkan password untuk melanjutkan</h5>
+  </ion-label>  
+  
+  <ion-list>
+   
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" maxlength="6" [(ngModel)]="cPassword" required></ion-input>
+    </ion-item> 
+  </ion-list>
+  
+  <div padding>  
+    <button ion-button block (click)="signin()" type="submit">Masuk</button>
+  </div>
+  <ion-label text-center (click)="showPIN()" style="font-size:16px;"><b> Lupa password? </b></ion-label>
+</ion-content> -->
+<ion-content style="background: url('assets/bg-btm.png') no-repeat; background-position-x: 10%; background-position: bottom; height: 100%; width: 100%;">
+  <img src="assets/logo.png" class="atas">
+  <ion-grid no-padding>
+    <ion-row>
+      <div class="top">
+        <!-- <div class="judul">Selamat Datang,</div> -->
+        <div class="nama">{{cNamaNasabah}}</div>
+        <div class="teks">Masukkan password untuk melanjutkan.</div>
+      </div>
+    </ion-row>
+    <ion-row class="form" >
+      <div class="label">Password</div>
+    </ion-row>
+    <ion-row class="form" >
+        <ion-input type="password" maxlength="6" [(ngModel)]="cPassword" required></ion-input>
+    </ion-row>
+    <ion-row>
+      <button class="btn-go" (click)="signin()" type="submit">Masuk</button>
+    </ion-row>
+    <ion-row justify-content-center>
+      <div class="link" (click)="showPIN()">Lupa password?</div>
+    </ion-row>
+  </ion-grid>
+  <!-- <img src="assets/bg-btm.png" class="bawah"> -->
+</ion-content>

@@ -1,0 +1,85 @@
+<ion-header no-shadow no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="light"></ion-icon>
+    </button>
+    <ion-title><font style="color: white">Home</font></ion-title>
+  </ion-navbar>
+  <!-- <ion-toolbar>
+    <ion-title class="title2"><font class="ucapan">{{ucapin}}, <br>{{nama}}</font></ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content no-bounce>
+  <!-- <ion-title class="title2"><font class="ucapan">{{ucapin}},</font><br><font class="nama">{{nama}}</font></ion-title> -->
+  <div class="title2">
+      <ion-title><font class="ucapan">{{ucapin}},</font><br><font class="nama">{{nama}}</font></ion-title>
+      <ion-card class="menu">
+        <ion-grid no-padding>
+          <ion-row justify-content-center>
+            <!-- <ion-col col-1></ion-col> -->
+            <ion-col col-4 (click)="openRekening()">
+              <div class="kotak"><ion-icon name="card" color="ijo"></ion-icon></div>
+              <div>Rekening</div>
+            </ion-col>
+            <ion-col col-4 (click)="openPrabayar()">
+              <div class="kotak"><ion-icon name="phone-portrait" color="ijo"></ion-icon></div>
+              <div>Prabayar</div>
+            </ion-col>
+            <ion-col col-4 (click)="openPascabayar()">
+              <div class="kotak"><ion-icon name="ios-call" color="ijo"></ion-icon></div>
+              <div>Pascabayar</div>
+            </ion-col>
+            <!-- <ion-col col-1></ion-col> -->
+          </ion-row>
+          <ion-row justify-content-center>
+            <!-- <ion-col col-1></ion-col> -->
+            <ion-col col-4 (click)="openBPJS()">
+              <div class="kotak"><ion-icon name="add-circle" color="ijo"></ion-icon></div>
+              <div>BPJS</div>
+            </ion-col>
+            <ion-col col-4 (click)="openRiwayat()">
+              <div class="kotak"><ion-icon name="ios-time" color="ijo"></ion-icon></div>
+              <div>Riwayat</div>
+            </ion-col>
+            <ion-col col-4 (click)="openSetting()">
+              <div class="kotak"><ion-icon name="settings" color="ijo"></ion-icon></div>
+              <div>Setting</div>
+            </ion-col>
+            <!-- <ion-col col-1></ion-col> -->
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+  </div>
+  <hr>
+  <div class="promo">
+    <font class="styleSubJudul">Brosur</font>
+    <ion-scroll scrollX="true" direction="x" class="scroll-promo">
+      <ion-card *ngFor="let va of data" class="card-promo">
+        <img [src]="va.Url[0]" class="img-promo">
+        <div class="card-title">{{va.Brosur}}</div>
+      </ion-card>
+    </ion-scroll>
+  </div>
+  <div class="berita">
+    <font class="styleSubJudul">Berita</font>
+    <ion-scroll scrollX="true" direction="x" class="scroll-berita">
+      <ion-card *ngFor="let berita of dataBerita" class="card-berita" text-wrap>
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col><img [src]="berita.Url[0]" class="img-berita"></ion-col>
+            <!-- <ion-col><img src="../../assets/imgs/berita2.jpg" class="img-berita"></ion-col> -->
+          </ion-row>
+        </ion-grid>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="berita-judul">{{berita.Berita}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="berita-isi">{{berita.Deskripsi}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </ion-scroll>
+  </div>
+</ion-content>

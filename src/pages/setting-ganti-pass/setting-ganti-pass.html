@@ -1,0 +1,32 @@
+
+<ion-header>
+  <ion-navbar> 
+    <ion-title>Ganti Password Aplikasi</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding> 
+
+<ion-list>
+ 
+  <ion-item> 
+    <ion-label floating>Password Lama</ion-label>  
+    <ion-input maxlength="6" type="password" [(ngModel)]="cPasswordLama" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password Baru</ion-label>
+    <ion-input maxlength="6" type="password" [(ngModel)]="cPasswordBaru" required></ion-input>
+  </ion-item> 
+
+  <ion-item>
+    <ion-label floating>Ketik Ulang Password Baru</ion-label> 
+    <ion-input maxlength="6" type="password" [(ngModel)]="cKetikPasswordBaru" required></ion-input>
+  </ion-item> 
+</ion-list>
+
+<div padding>  
+  <button ion-button block (click)="proses()" type="submit">Proses</button>
+</div>
+
+</ion-content>

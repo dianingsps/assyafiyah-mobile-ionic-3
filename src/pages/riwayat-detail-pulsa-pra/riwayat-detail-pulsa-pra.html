@@ -1,0 +1,59 @@
+<!--
+  Generated template for the RiwayatDetailPulsaPraPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left> 
+      <button ion-button (click)="dismiss()">  
+        <ion-icon name="ios-arrow-back">&nbsp;Back</ion-icon>
+      </button> 
+    </ion-buttons>
+    <ion-title>{{cTitle}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>  
+  <ion-list>
+
+    <ion-item style="margin-bottom:-16px;" no-lines>
+      <h1><font size='2px'>Tanggal</font></h1>
+      <h2>{{dTgl}}</h2>
+    </ion-item>
+
+    <ion-item style="margin-bottom:-16px;" no-lines>
+      <h1><font size='2px'>Rekening</font></h1>
+      <h2>{{cRekening}}</h2>
+    </ion-item>
+
+    <ion-item style="margin-bottom:-16px;" no-lines>
+      <h1><font size='2px'>Nomor HP</font></h1>
+      <h2>{{cNomor}}</h2>
+    </ion-item>
+
+    <ion-item style="margin-bottom:-16px;" no-lines>
+      <h1><font size='2px'>Produk / Nominal</font></h1>
+      <h2>{{cNominal}}</h2>
+    </ion-item>
+
+    <ion-item style="margin-bottom:-16px;" no-lines>
+      <h1><font size='2px'>Harga</font></h1>
+      <h2>{{nHarga}}</h2>
+    </ion-item>
+
+    <ion-item style="margin-bottom:-16px;" no-lines [hidden]="lHide">
+      <h1><font size='2px'>Serial Number / Reff</font></h1>
+      <h2>{{cSN}}</h2>
+    </ion-item>
+
+    <ion-item style="margin-bottom:-16px;" no-lines>
+      <h1><font size='2px'>Status</font></h1>
+      <h2>{{cStatus}}</h2>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

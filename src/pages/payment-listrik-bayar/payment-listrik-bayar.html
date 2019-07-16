@@ -1,0 +1,63 @@
+<!--
+  Generated template for the PaymentCicilanBayarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left> 
+      <button ion-button (click)="dismiss()">  
+        <ion-icon name="ios-arrow-back">&nbsp;Back</ion-icon>
+      </button> 
+    </ion-buttons>
+    <ion-title>{{cTitle}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>  
+  <ion-list>
+    <ion-item> 
+      <ion-label>Pilih Rekening : </ion-label>
+      <ion-select [(ngModel)]="cRekening" interface="popover">
+        <ion-option *ngFor="let item of optionsList" value="{{item.value}}">{{item.text}}</ion-option>
+      </ion-select> 
+    </ion-item>  
+    <ion-item>
+        <ion-label stacked>Nomor Pelanggan :</ion-label>  
+        <ion-input disabled type="number" [(ngModel)]="cNomor">{{cNomor}}</ion-input>
+    </ion-item>  
+    <ion-item> 
+      <ion-label stacked>Nama :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cNama">{{cNama}}</ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label floating>Periode :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cBulan">{{cBulan}}</ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label floating>Daya :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cDaya">{{cDaya}}</ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label floating>Usage :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cUsage">{{cUsage}}</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Nominal :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cNominal">{{cNominal}}</ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label floating>Admin :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cAdmin">{{cAdmin}}</ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label floating>Total Bayar :</ion-label>  
+      <ion-input disabled type="text" [(ngModel)]="cTotalBayar">{{cTotalBayar}}</ion-input>
+    </ion-item>  
+  </ion-list>
+  <div padding><button ion-button block (click)="validSaving()" type="submit">Proses</button></div>      
+</ion-content>
+  

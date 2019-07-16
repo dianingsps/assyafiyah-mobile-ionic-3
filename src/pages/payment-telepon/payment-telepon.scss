@@ -1,0 +1,32 @@
+page-payment-telepon {
+    .my-Label {
+        font-size: 14pt; 
+        text-align: center;
+    }
+    
+    .card{
+        width: 90%;
+        display: block;
+        margin: 7% auto;
+        border-radius: 5px;
+        padding: 1%;
+    }
+
+    .teks{
+        font-size: 11pt;
+    }
+
+    .button{
+        border-radius: 5px;
+    }
+
+    ion-input {
+        input {
+          text-align: right;
+          /* IF YOU ALSO WANT TO PUSH PLACHEHOLDER TO THE RIGHT USE THE FOLLOWING, IF NOT JUST DELETE THE ::-webkit-input-placeholder*/
+        //   ::-webkit-input-placeholder {
+        //     text-align: right;
+        //   }
+        }
+    }
+}

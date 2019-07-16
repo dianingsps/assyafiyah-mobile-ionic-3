@@ -1,0 +1,66 @@
+<!-- <ion-header>
+  <ion-navbar> 
+    <ion-title>Masukkan Token dan PIN</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding> 
+
+<ion-list>
+ 
+  <ion-item> 
+    <ion-label floating>Token</ion-label>  
+    <ion-input size="6" maxlength="6" type="tel" [(ngModel)]="cToken" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>PIN</ion-label>
+    <ion-input maxlength="6" type="password" [(ngModel)]="cPIN" required></ion-input>
+  </ion-item> 
+</ion-list>
+
+<div padding>   
+  <button ion-button block (click)="validSaving()" type="submit">Proses</button>
+</div>
+
+</ion-content> -->
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row justify-content-center>
+      <div class="top">
+        <img src="assets/logo.png" class="logo"/>
+        <div style="margin: 5% 10% 0 10%">Masukkan Token dan PIN</div>
+        <div class="bg"></div>
+      </div>
+    </ion-row>
+    <!-- <ion-row class="form">
+      <div class="label">Token</div>
+      <ion-item no-padding no-lines> 
+        <ion-input size="6" maxlength="6" type="tel" [(ngModel)]="cToken" required></ion-input>
+      </ion-item>
+      <div class="label">PIN</div>
+      <ion-item no-padding no-lines> 
+        <ion-input maxlength="6" type="password" [(ngModel)]="cPIN" required></ion-input>
+      </ion-item>
+    </ion-row> -->
+    <ion-row class="form" style="padding-top: 30%">
+      <div class="label">Token</div>
+    </ion-row>
+    <ion-row class="form" >
+      <!-- <ion-item no-padding no-lines>  -->
+        <ion-input size="6" maxlength="6" type="tel" [(ngModel)]="cToken" required></ion-input>
+      <!-- </ion-item> -->
+    </ion-row>
+    <ion-row class="form" >
+      <div class="label">PIN</div>
+    </ion-row>
+    <ion-row class="form" >
+      <!-- <ion-item no-padding no-lines>  -->
+        <ion-input maxlength="6" type="password" [(ngModel)]="cPIN" required></ion-input>
+      <!-- </ion-item> -->
+    </ion-row>
+    <ion-row>
+      <button class="btn-go" (click)="validSaving()" type="submit">GO</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

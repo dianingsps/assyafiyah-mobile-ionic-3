@@ -1,0 +1,17 @@
+<ion-card [hidden] = "hidden1">
+  <ion-list>
+    <ion-item>
+      <ion-label style="text-align: center"><font style="font-size: 14pt">Dalam Pengembangan :)</font></ion-label>
+    </ion-item>  
+  </ion-list>
+</ion-card>
+  
+<ion-card [hidden] = "hidden2">
+  <ion-list>
+    <ion-item>
+      <ion-label><font class="teks">Masukkan Nomor : </font></ion-label>  
+      <ion-input type="tel" maxlength="13" [(ngModel)]="cNomor"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding><button ion-button block color="ijo" (click)="proses()" type="submit">Proses</button></div>
+</ion-card>

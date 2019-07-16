@@ -1,0 +1,12 @@
+<ion-card>
+  <ion-list>
+    <ion-item> 
+      <ion-label><font class="teks">Pilih Rekening : </font></ion-label>
+      <ion-select [(ngModel)]="cRekening" interface="popover">
+        <ion-option *ngFor="let item of optionsList" value="{{item.value}}">{{item.text}}</ion-option>
+      </ion-select>  
+    </ion-item> 
+  </ion-list> 
+  <hr no-margin>
+  <div padding><button ion-button block color="ijo" (click)="proses()" type="submit">Proses</button></div>  
+</ion-card> 

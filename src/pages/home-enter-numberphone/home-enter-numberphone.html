@@ -1,0 +1,42 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>Dapatkan Token</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding> 
+<h6 style="margin-top:35%;" align="center">Masukkan nomor HP anda sesuai yang telah didaftarkan pada bank.</h6>
+<ion-list> 
+  <ion-item style="align-content: center;">
+    <ion-label style="font-size:20px;">+62</ion-label>
+    <ion-input style="font-size:20px;" type="number" [(ngModel)]="cNomor" required text-left placeholder="ex: 81945xxxxxx"></ion-input>
+  </ion-item>
+</ion-list> 
+
+<div padding>   
+  <button ion-button block (click)="validSaving()" type="submit">Kirim</button>
+</div>
+ 
+</ion-content> -->
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row justify-content-center>
+      <div class="top">
+        <img src="assets/logo.png" class="logo"/>
+        <div style="margin: 5% 10% 0 10%">Masukkan nomor HP anda sesuai yang telah didaftarkan pada bank.</div>
+        <div class="bg"></div>
+      </div>
+    </ion-row>
+    <ion-row class="form">
+      <ion-col col-2 style="margin-right: 2%">
+        <ion-input readonly value="+62" text-center style="padding-left: 0"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-input type="number" [(ngModel)]="cNomor" required text-left placeholder="ex: 81945xxxxxx"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button class="btn-go" (click)="validSaving()" type="submit">PROSES</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

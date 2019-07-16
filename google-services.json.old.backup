@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1049690042630",
+    "firebase_url": "https://ionic-mbanking.firebaseio.com",
+    "project_id": "ionic-mbanking",
+    "storage_bucket": "ionic-mbanking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049690042630:android:533cdc5cae9d091f",
+        "android_client_info": {
+          "package_name": "mobilebanking.assistindo.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049690042630-8rsm41n2sdks2b5ou6cr65li2ftiop4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW1MDIt7a8L_o3mjUduUi3jaruBu7BmEU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

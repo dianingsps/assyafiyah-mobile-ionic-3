@@ -1,0 +1,28 @@
+<ion-card [hidden] = "hidden1">
+  <ion-list>
+    <ion-item>
+      <ion-label class="my-Label" text-wrap>Maaf, layanan ini belum tersedia untuk bank anda.</ion-label>
+    </ion-item>  
+  </ion-list>
+</ion-card>
+<ion-card [hidden] = "hidden2">
+  <ion-list>
+    <ion-item>  
+      <ion-label><font class="teks">Perusahaan : </font></ion-label>
+      <ion-select [(ngModel)]="cFinance" interface="popover">   
+        <ion-option value="FP_COLUMBIA">Columbia Finance</ion-option>
+        <ion-option value="FP_MAF">Mega Auto Finance</ion-option>
+        <ion-option value="FP_MCF">Mega Central Finance</ion-option>
+        <!--ion-option value="FP_ADIRA">Adira Finance</ion-option-->
+        <!--ion-option value="FP_BAF">Bussan Auto Finance</ion-option-->
+        <!--ion-option value="FP_WOKA">Woka Finance</ion-option-->
+        <!--ion-option value="FP_WOM">WOM Finance</ion-option-->
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label><font class="teks">ID Pelanggan : </font></ion-label>
+        <ion-input type="tel" maxlength="20" [(ngModel)]="cNomor"></ion-input>
+    </ion-item>  
+  </ion-list>
+  <div padding><button ion-button block color="ijo" (click)="validSaving()" type="submit">Proses</button></div>
+</ion-card>

@@ -1,0 +1,32 @@
+<ion-item no-lines style="margin-top: 3%"> 
+  <ion-label><font class="teks">Pilih Rekening : </font></ion-label>
+  <ion-select [(ngModel)]="cRekening" interface="popover">
+    <ion-option *ngFor="let item of optionsList" value="{{item.value}}">{{item.text}}</ion-option>
+  </ion-select> 
+</ion-item>
+<hr>
+
+<div class="container">
+  <div class="container__item">
+    <form name="formpulsa" class="form" (ngSubmit)="CekPrefix()">  
+      <input type="tel" maxlength="13" [(ngModel)]="cNomor" [ngModelOptions]="{standalone:true}" class="form__field" placeholder="Masukkan nomor HP"/>
+      <button type="submit" class="btn btn--primary btn--inside uppercase"> Cari </button>
+    </form>
+  </div>
+</div>
+
+<div style="margin-top: 5%;">
+  <ion-row align-items-center class="nominalrow" *ngFor="let item of data;let i = index">
+    <ng-container *ngIf=" i % 2 == 0" >
+      <ion-col class="nominalcol nominalcol--click" (click)="validSaving(data[i])" type="submit">
+        <div><font class="nom">{{data[i].keterangan}}</font></div>
+        <div class="price"><font>Rp. {{data[i].nominal}}</font></div>
+      </ion-col>
+      
+      <ion-col class="nominalcol nominalcol--click" (click)="validSaving(data[i+1])" type="submit" [hidden]="hiddenButton(data,i+1)">
+        <div><font class="nom">{{showData(data,i+1)}}</font></div>
+        <div class="price"><font>Rp. {{showNominal(data,i+1)}}</font></div>
+      </ion-col>
+    </ng-container>
+  </ion-row>
+</div>

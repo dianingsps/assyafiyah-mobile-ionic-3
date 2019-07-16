@@ -1,0 +1,32 @@
+
+<ion-header>
+  <ion-navbar> 
+    <ion-title>Ganti PIN</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding> 
+
+<ion-list>
+ 
+  <ion-item> 
+    <ion-label floating>PIN Lama</ion-label>  
+    <ion-input maxlength="6" type="password" [(ngModel)]="cPINLama" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>PIN Baru</ion-label>
+    <ion-input maxlength="6" type="password" [(ngModel)]="cPINBaru" required></ion-input>
+  </ion-item> 
+
+  <ion-item>
+    <ion-label floating>Ketik Ulang PIN Baru</ion-label>
+    <ion-input maxlength="6" type="password" [(ngModel)]="cKetikPINBaru" required></ion-input>
+  </ion-item> 
+</ion-list>
+
+<div padding>  
+  <button ion-button block (click)="proses()" type="submit">Proses</button>
+</div>
+
+</ion-content>

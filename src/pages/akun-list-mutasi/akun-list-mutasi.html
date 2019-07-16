@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left> 
+      <button ion-button (click)="dismiss()">  
+        <ion-icon name="ios-arrow-round-back"></ion-icon>
+      </button> 
+    </ion-buttons>
+    <ion-title><font style="color: white">{{cTitle}}</font></ion-title>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content>
+  <ion-list class="list-avatar-page">
+    <ion-item *ngFor="let va of data" (click)="detail(va)">
+      <ion-icon [ngStyle]="{'color': va.warna}" [name]="va.ikon" item-start></ion-icon>
+      <p [hidden] = "true">{{va.id}}</p>
+      <p>{{va.jenis}} - {{va.tgl}}</p>
+      <h2>Rp. {{va.nominal}} </h2>
+    </ion-item>
+  </ion-list>   
+</ion-content>

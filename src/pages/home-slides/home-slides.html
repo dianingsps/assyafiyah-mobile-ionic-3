@@ -1,0 +1,142 @@
+<!-- <ion-slides>
+  <ion-slide>
+    <h3 align="left">Buat Password</h3>
+    <p style="font-size:16px" align="left">
+      Buat password untuk masuk aplikasi. 
+      <b>Password dapat berupa angka, huruf, atau kombinasi keduanya dan harus 6 digit</b></p>
+      <ion-list>
+        <ion-item>    
+          <ion-input maxlength="6" type="password" name="cPassword" [(ngModel)]="cPassword" placeholder="Ketik disini" #password></ion-input> 
+        </ion-item>
+        <ion-item>    
+          <ion-input maxlength="6" type="password" name="cPasswordUlang" [(ngModel)]="cPasswordUlang" placeholder="Ketik ulang password" #password></ion-input> 
+        </ion-item>
+      <div padding><button color="primary" ion-button block (click)="setPassword()" type="submit">Simpan</button></div>  
+    </ion-list>
+  </ion-slide>
+
+  <ion-slide>
+    <h3 align="left">Segera Ganti PIN Anda</h3>
+    <p style="font-size:16px" align="left">Tahap ini <b>PENTING</b>. Demi keamanan kami merekomendasikan untuk mengganti PIN secara berkala.<br></p>
+    <p style="font-size:16px;color: red" align="left">PIN harus berupa angka dengan panjang 6 digit</p>
+      <ion-list>
+       <ion-item>    
+         <ion-input type="password" maxlength="6"  name="cPINLama" [(ngModel)]="cPINLama" placeholder="PIN Lama"></ion-input>
+       </ion-item> 
+       <ion-item>    
+        <ion-input type="password" maxlength="6"  name="cPINBaru" [(ngModel)]="cPINBaru" placeholder="PIN Baru"></ion-input>
+      </ion-item> 
+      <ion-item>     
+        <ion-input type="password" maxlength="6"  name="cPINBaruUlang" [(ngModel)]="cPINBaruUlang" placeholder="Ketik Ulang PIN Baru"></ion-input>
+      </ion-item> 
+      <div padding><button color="primary" ion-button block (click)="gantipin()" type="submit">Proses</button></div>  
+      <ion-label text-center (click)="skipGantiPIN()" class="lewati">Tidak perlu mengganti?<b style="color: dodgerblue"> Lewati Tahap Ini </b>
+      </ion-label>
+    </ion-list>
+  </ion-slide>
+ 
+  <ion-slide>
+    <h3 align="left">Atur Rekening Utama</h3>
+    <p style="font-size:16px" align="left">Ini akan memudahkan anda dalam bertransaksi jika anda mempunyai lebih dari satu rekening. Anda bisa mengatur ulang di pengaturan aplikasi.</p>
+    <ion-list>
+      <ion-item> 
+        <ion-label style="font-size:13px">Pilih Rekening : </ion-label>
+        <ion-select [(ngModel)]="cRekening" interface="popover">
+          <ion-option *ngFor="let item of optionsList" value="{{item.value}}">{{item.text}}</ion-option>
+        </ion-select>  
+      </ion-item> 
+    </ion-list>    
+    <div padding><button color="primary" ion-button block (click)="selanjutnya()" type="submit">Selanjutnya</button></div>  
+  </ion-slide>
+</ion-slides> -->
+
+<ion-slides style="background: url('assets/bg-top.png') no-repeat; background-position: top;">
+  <ion-slide>
+    <!-- <img src="assets/bg-top.png" class="atas"> -->
+    <ion-grid>
+      <ion-row justify-content-center align-items-center>
+        <h3 style="margin-top: 5%">Buat Password</h3>
+        <div class="kotak">
+          Buat password untuk masuk aplikasi.<br>
+          <font style="font-weight: 500">Password dapat berupa angka, huruf, atau kombinasi keduanya dan harus 6 digit.</font>
+        </div>
+      </ion-row>
+      <ion-row justify-content-center class="form">
+        <ion-item no-lines>
+          <ion-label><ion-icon name="lock" color="dark"></ion-icon></ion-label>
+          <ion-input maxlength="6" type="password" name="cPassword" [(ngModel)]="cPassword" placeholder="Ketik disini" #password></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row justify-content-center class="form">
+        <ion-item no-lines>
+          <ion-label><ion-icon name="unlock" color="dark"></ion-icon></ion-label>
+          <ion-input maxlength="6" type="password" name="cPasswordUlang" [(ngModel)]="cPasswordUlang" placeholder="Ketik ulang password" #password></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row justify-content-center align-items-center>
+        <div class="btn" (click)="setPassword()" type="submit">Simpan</div>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+
+  <ion-slide>
+    <!-- <img src="assets/bg-top.png" class="atas"> -->
+    <ion-grid>
+      <ion-row align-items-center>
+        <h3 style="margin-top: 5%">Segera Ganti PIN Anda</h3>
+        <div class="kotak" style="margin-bottom: 10%">
+            Tahap ini <b>PENTING</b>. Demi keamanan kami merekomendasikan untuk mengganti PIN secara berkala.<br>
+            <font style="color: red">PIN harus berupa angka dengan panjang 6 digit.</font>
+        </div>
+      </ion-row>
+      <ion-row justify-content-center class="form">
+        <ion-item no-lines>
+          <ion-label><ion-icon name="unlock" color="dark"></ion-icon></ion-label>
+          <ion-input type="password" maxlength="6"  name="cPINLama" [(ngModel)]="cPINLama" placeholder="PIN Lama"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row justify-content-center class="form">
+        <ion-item no-lines>
+          <ion-label><ion-icon name="lock" color="dark"></ion-icon></ion-label>
+          <ion-input type="password" maxlength="6"  name="cPINBaru" [(ngModel)]="cPINBaru" placeholder="PIN Baru"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row justify-content-center class="form">
+        <ion-item no-lines>
+          <ion-label><ion-icon name="lock" color="dark"></ion-icon></ion-label>
+          <ion-input type="password" maxlength="6"  name="cPINBaruUlang" [(ngModel)]="cPINBaruUlang" placeholder="Ketik Ulang PIN Baru"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row justify-content-center align-items-center>
+        <div class="btn" (click)="gantipin()" type="submit">Proses</div>
+      </ion-row>
+      <ion-row justify-content-center align-items-center>
+        <ion-label (click)="skipGantiPIN()" style="font-size: 11pt; margin-top: 5%; margin-bottom: 10%">Tidak perlu mengganti?<b style="color: #36884D"> Lewati Tahap Ini </b></ion-label>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+
+  <ion-slide>
+    <!-- <img src="assets/bg-top.png" class="atas"> -->
+    <ion-grid>
+      <ion-row justify-content-center align-items-center>
+        <h3 style="margin-top: 5%">Atur Rekening Utama</h3>
+        <div class="kotak">
+          Ini akan memudahkan anda dalam bertransaksi jika anda mempunyai lebih dari satu rekening. Anda bisa mengatur ulang di pengaturan aplikasi.
+        </div>
+      </ion-row>
+      <ion-row justify-content-center class="form">
+          <ion-list no-margin>
+            <ion-item> 
+              <ion-label style="color: black">Pilih Rekening : </ion-label>
+              <ion-select [(ngModel)]="cRekening" interface="popover">
+                <ion-option *ngFor="let item of optionsList" value="{{item.value}}">{{item.text}}</ion-option>
+              </ion-select>  
+            </ion-item> 
+          </ion-list> 
+      </ion-row>
+      <ion-row justify-content-center align-items-center>
+        <div class="btn" (click)="selanjutnya()" type="submit">Selanjutnya</div>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>

@@ -1,0 +1,47 @@
+<!--
+  Generated template for the PaymentCicilanBayarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-buttons left> 
+        <button ion-button (click)="dismiss()">  
+          <ion-icon name="ios-arrow-back">&nbsp;Back</ion-icon>
+        </button> 
+      </ion-buttons>
+      <ion-title>{{cTitle}}</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-icon name = "calendar" item-start></ion-icon>
+      <ion-label stacked>Tanggal :</ion-label>
+      <ion-label class="isi"> {{dTgl}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name = "keypad" item-start></ion-icon>
+      <ion-label stacked>Faktur :</ion-label>
+      <ion-label class="isi"> {{cFaktur}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name = "cart" item-start></ion-icon>
+      <ion-label stacked>Jenis :</ion-label>
+      <ion-label class="isi"> {{cJenis}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name = "pricetags" item-start></ion-icon>
+      <ion-label stacked>Nominal :</ion-label>
+      <ion-label class="isi"> Rp. {{nNominal}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name = "list" item-start></ion-icon>
+      <ion-label text-wrap class="isiket"> {{cKet}} </ion-label>
+    </ion-item>  
+  </ion-list>   
+</ion-content>

@@ -1,0 +1,75 @@
+page-home-enter-numberphone {
+    // .title.title-md {
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 0%;
+    //     transform: translateX(-50%);
+    //     height: 100%;
+    //     width: 70%;
+    //     text-align: center;
+    // }
+
+    // .msg{
+    //     font-weight: bold;
+    // }
+
+    .content{
+        height: 100%;
+        width: 100%;
+    }
+
+    .grid{
+        width: 100%;
+    }
+
+    .row{
+        width: 100%;
+    }
+
+    .top{
+        background-color: #36884D;
+        text-align: center;
+        font-size: 12pt;
+        color: #FFFFFF;
+        font-weight: 500;
+    }
+
+    .bg{
+        background-color: #36884D;
+        height: 25%;
+        border-radius: 0 0 0 84%;
+        border-bottom: 10px solid #fdd835;
+    }
+
+    .logo{
+        width: 22%;
+        display: block;
+        margin: 20% auto 0 auto;
+    }
+
+    .form{
+        padding: 30% 10% 0% 10%;
+        color: #36884D;
+        font-weight: 500;
+    }
+
+    .input{
+        border: 1px solid #36884D;
+        border-radius: 50px;
+        font-size: 11pt;
+        padding-left: 4%;
+        color: #000000;
+    }
+
+    .btn-go{
+        //background-color: #36884D;
+        background: linear-gradient(to right, #36884D 0%, #ccb031 100%);
+        border-radius: 50px;
+        font-size: 14pt;
+        font-weight: bold;
+        color: #FFFFFF;
+        width: 100%;
+        padding: 4%;
+        margin: 5% 10% 10% 10%;
+    }
+}

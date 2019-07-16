@@ -1,0 +1,65 @@
+page-home-slides {
+    .atas{
+       position: relative;
+       top: 0;
+       left: 0;
+    }
+
+    .grid{
+        height: 100%;
+        width: 80%;
+    }
+
+    .row{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    h3{
+        color: #000000;
+        font-size: 16pt;
+        margin-top: 30%;
+    }
+
+    .kotak{
+        font-size: 11pt;
+        border: 2px solid #36884D;
+        padding: 5%;
+        border-radius: 10px;
+        color: #000000;
+        margin-bottom: 20%;
+        margin-top: 2%;
+        // border: 2px solid;
+        // border-image: linear-gradient(45deg,#36884D, #fdd835) 1;
+    }
+
+    .form{
+        margin-top: 2%;
+        border-bottom: 2px solid #36884D;
+    }
+
+    .form:hover{
+        // border-bottom: 2px solid #fdd835;
+        border-bottom: 2px solid #fff59d;
+    }
+
+    .icon{
+        font-size: 25px;
+    }
+
+    .item{
+        font-size: 12pt;
+    }
+
+    .btn{
+        margin-top: 10%;
+        padding: 3.5%;
+        background-color: #36884D;
+        width: 33%;
+        color: #FFFFFF;
+        font-size: 11pt;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow: 0px 6px 10px #36884D;
+    }
+} 
