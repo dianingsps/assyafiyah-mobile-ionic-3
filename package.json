@@ -36,7 +36,7 @@
     "@ionic-native/status-bar": "4.3.3",
     "@ionic/storage": "2.0.1",
     "com.darktalker.cordova.screenshot": "^0.1.6",
-    "cordova-android": "7.1.4",
+    "cordova-android": "11.0.0",
     "cordova-android-play-services-gradle-release": "^1.2.0",
     "cordova-clipboard": "^1.2.1",
     "cordova-ios": "^5.0.1",
